@@ -211,6 +211,13 @@ class board{
         display();
       }
     }
+    ~board(){
+      delete python;
+      for (short i = 0; i < R;i++){
+        delete[] G[i];
+      }
+      delete G;
+    }
 };
 
 
